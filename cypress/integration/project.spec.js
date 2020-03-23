@@ -130,7 +130,7 @@ describe('Daily Prophet', () => {
 
   it('Você deve utilizar `transitions` para suavizar alterações de estilo entre seus elementos', () => {
     cy.readFile('./style.css').then((content) => {
-      expect(removeLineBreaks(content)).to.match(/@keyframes\s.+\s{.+(transition).+}/);
+      expect(removeLineBreaks(content)).to.match(/transition/);
     });
   });
 
@@ -144,7 +144,7 @@ describe('Daily Prophet', () => {
 
   it('Você deve utilizar `steps` para que as transições entre as etapas da sua animação sejam discretas', () => {
     cy.readFile('./style.css').then((content) => {
-      expect(removeLineBreaks(content)).to.match(/@keyframes\s.+\s{.+(steps()).+}/);
+      expect(removeLineBreaks(content)).to.match(/steps/);
     });
   });
 });
